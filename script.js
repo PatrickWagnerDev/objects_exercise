@@ -28,6 +28,19 @@
         // Wenn Methoden (Funktionen in objects) ausgelesen werden sollen, dann wie folgt
             myObject.loghobby();
 
+    // Keys auslesen
+        // 'Keys' können ausgelesen werden durch Object.keys("Objectname")
+        // Hiermit wird ein ein Array mit den Keys ausgelesen
+            let objKeys = Object.keys(myObject);
+
+        // Verwendung z.B. für for-loops
+            let ourArray = [];
+            for (let i = 0; i < objKeys.length; i++) {
+                const element = objKeys[i];
+                ourArray.push(myObject[objKeys[i]]); 
+            }
+            console.table(ourArray);
+            
 // Console.table
     // Zur schöneren Ausgabe kann man simple Objekte und Arrays auch mit console.table ausgeben
         console.table(myObject.job);
