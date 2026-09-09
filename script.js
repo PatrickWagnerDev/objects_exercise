@@ -4,13 +4,16 @@
         // Elemente bestehen aus einem 'Key' und einem 'Value' welche mit ':' getrennt werden
         // 'Keys' sind Grundsätzlich Strings, wobei die 'Values' jedem andern Datentyp, Array, Object oder Funktion entsprechen können
         let myObject = {
-            'name':'Flo',
-            'age':45,
-            'job': {
+            'name':'Flo',                   // -> String
+            'age':45,                       // -> Number
+            'job': {                        // -> Objects
                 'name':'Dev-Mentor',
                 'company':'DA'
             },
-            'good_guy':true,
+            'good_guy':true,                // -> Boolean
+            'loghobby': function() {        // -> Methoden
+                console.log('Warhammer');                
+            }
         };
 
     // Objekte können auf 2 Arten ausgelesen werden
@@ -20,6 +23,10 @@
         // oder auch über [], wobei hier auch Variablen eingetragen werden können, wie im Beispiel
             let objKey = 'age';
             console.log(myObject[objKey]);
+
+    // Methoden
+        // Wenn Methoden (Funktionen in objects) ausgelesen werden sollen, dann wie folgt
+            myObject.loghobby();
 
 // Console.table
     // Zur schöneren Ausgabe kann man simple Objekte und Arrays auch mit console.table ausgeben
