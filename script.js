@@ -41,6 +41,13 @@
             }
             console.table(ourArray);
             
+// JSON
+    // Die Unterschiede zwischen einem JSON und einem Object sind folgendes:
+    // JSON werden genutzt um so auch z.B. an ein Backend gesendet zu werden
+    // In validem JSON werden die 'Keys' und String immer in "" geschrieben
+    // In JSON dürfen keine Funktionen(Methoden), dates oder undefined stehen
+    // Jedes JSON ist ein Objekt, aber nicht jedes Objekt ist ein JSON
+
 // Console.table
     // Zur schöneren Ausgabe kann man simple Objekte und Arrays auch mit console.table ausgeben
         console.table(myObject.job);
