@@ -50,6 +50,7 @@
 
     // JSONArray: filter-Methode
         // Hiermit kann man Objekte aus Arrays filtern
+        // Beispiel Array:
         let myObjectArr = [
             {
                 "name":"Max",
@@ -72,15 +73,22 @@
                 "is_a_good_guy": false
             },
         ];
-        // Ein Array.filter ist wie folgt aufgebaut
-        //            Das Array  .filter   Paramenter   "function"   "return" die Funktion selbst
-        //                                 der einzelne              muss true oder false ergeben
-        //                                 Eintrag vom Array
-        console.log(  myObjectArr.filter   ((element)       =>       element['is_a_good_guy']==true));
-            // -> (3) [{…}, {…}, {…}]
-            // ->   0: {name: 'Max', is_a_good_guy: true}
-            // ->   1: {name: 'Arnold', is_a_good_guy: true}
-            // ->   2: {name: 'Justus', is_a_good_guy: true}
+
+        // Array.filter
+            // Ein Array.filter ist wie folgt aufgebaut
+            //            Das Array  .filter   Paramenter   "function"   "return" die Funktion selbst
+            //                                 der einzelne              muss true oder false ergeben
+            //                                 Eintrag vom Array
+            console.log(  myObjectArr.filter   ((element)       =>       element['is_a_good_guy']==true));
+                // -> (3) [{…}, {…}, {…}]
+                // ->   0: {name: 'Max', is_a_good_guy: true}
+                // ->   1: {name: 'Arnold', is_a_good_guy: true}
+                // ->   2: {name: 'Justus', is_a_good_guy: true}
+
+        // Array.findIndex
+            // Ein Array.findIndex ist wie Array.filter aufgebaut, aber es gibt den Index aus
+            console.log(  myObjectArr.findIndex  ((element) => element['name']=='Justus'));
+
 
 // Console.table
     // Zur schöneren Ausgabe kann man simple Objekte und Arrays auch mit console.table ausgeben
