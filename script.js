@@ -48,6 +48,40 @@
     // In JSON dürfen keine Funktionen(Methoden), dates oder undefined stehen
     // Jedes JSON ist ein Objekt, aber nicht jedes Objekt ist ein JSON
 
+    // JSONArray: filter-Methode
+        // Hiermit kann man Objekte aus Arrays filtern
+        let myObjectArr = [
+            {
+                "name":"Max",
+                "is_a_good_guy": true
+            },
+            {
+                "name":"Peter",
+                "is_a_good_guy": false
+            },
+            {
+                "name":"Arnold",
+                "is_a_good_guy": true
+            },
+            {
+                "name":"Justus",
+                "is_a_good_guy": true
+            },
+            {
+                "name":"Bombur",
+                "is_a_good_guy": false
+            },
+        ];
+        // Ein Array.filter ist wie folgt aufgebaut
+        //            Das Array  .filter   Paramenter   "function"   "return" die Funktion selbst
+        //                                 der einzelne              muss true oder false ergeben
+        //                                 Eintrag vom Array
+        console.log(  myObjectArr.filter   ((element)       =>       element['is_a_good_guy']==true));
+            // -> (3) [{…}, {…}, {…}]
+            // ->   0: {name: 'Max', is_a_good_guy: true}
+            // ->   1: {name: 'Arnold', is_a_good_guy: true}
+            // ->   2: {name: 'Justus', is_a_good_guy: true}
+
 // Console.table
     // Zur schöneren Ausgabe kann man simple Objekte und Arrays auch mit console.table ausgeben
         console.table(myObject.job);
